@@ -47,7 +47,7 @@ const MeetTheTeam = () => {
     trigger: '#meet-the-team',
     scroller: 'body',
     start: 'top top',
-    end: 'top -200%',
+    end: 'top -400%',
     scrub: 2,
   };
 
@@ -252,7 +252,7 @@ const MeetTheTeam = () => {
 
       <div className="flex justify-center items-center flex-col h-full">
         {/* heading */}
-        <h1 className="playfair-display text-3xl sm:text-7xl my-12">
+        <h1 className="playfair-display text-5xl sm:text-7xl my-12">
           Meet The Team
         </h1>
 
@@ -268,7 +268,7 @@ const MeetTheTeam = () => {
           {/* names */}
           <div
             id="name"
-            className="min-[1440px]:basis-full items-center justify-center text-4xl flex-col flex"
+            className="min-[1440px]:basis-full items-center justify-center text-4xl flex-col flex my-12"
           >
             <div className="h-10 text-center relative w-full px-8 roboto-mono">
               {meetTheTeam.map((item, idx) => {
@@ -313,7 +313,7 @@ const MeetTheTeam = () => {
               {meetTheTeam.map((item, idx) => {
                 return (
                   <div
-                    className="absolute top-full right-1/2 w-full translate-x-1/2 opacity-0 text-xl md:text-3xl  "
+                    className="absolute top-full right-1/2 w-full translate-x-1/2 opacity-0"
                     id={`post-${idx}`}
                     key={idx}
                   >
