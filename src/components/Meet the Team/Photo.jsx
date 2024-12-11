@@ -1,7 +1,7 @@
 const Photo = ({ color, rotate, z, top, id }) => {
   return (
     <div
-      className="w-[50vh] h-[60vh] bg-white px-[5vh] py-[5vh] absolute team-photo"
+      className="lg:w-[60vh] lg:h-[70vh] sm:w-[50vh] sm:h-[60vh]  w-[80vw] h-[100vw] bg-white flex justify-center items-center absolute team-photo flex-col"
       id={id}
       style={{
         transform:
@@ -11,15 +11,13 @@ const Photo = ({ color, rotate, z, top, id }) => {
       }}
     >
       <div
-        className="absolute h-full w-full top-0 left-0 shadow-black bg-black shadow-lg opacity-0"
+        className="absolute h-full w-full top-0 left-0 shadow-black bg-black shadow-xl opacity-0"
         id={`${id}-film`}
       ></div>
-      <div
-        className="h-[40vh] w-[40vh] text-3xl text-black justify-center items-center flex"
-        style={{ backgroundColor: `${color}` }}
-      >
-        Photo
+      <div className="lg:h-[50vh] h-[60vw] aspect-square text-3xl text-black justify-center items-center flex">
+        <img src={color} className="h-full w-full" alt="" />
       </div>
+      <div id="spacer" className="h-1/6"></div>
     </div>
   );
 };

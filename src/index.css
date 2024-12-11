@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .playfair-display {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -14,3 +13,13 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
+
+@layer utilities {
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+    }
+  }
