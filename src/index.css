@@ -3,23 +3,30 @@
 @tailwind utilities;
 
 .playfair-display {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
 .roboto-mono {
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
 @layer utilities {
-      .no-scrollbar::-webkit-scrollbar {
-          display: none;
-      }
-      .no-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .mtt-xs-photo-frame {
+    @media (max-height: 700px) {
+      height: 70vw;
+      width: 60vw;
     }
   }
+}

@@ -225,7 +225,7 @@ const MeetTheTeam = () => {
 
   return (
     <div
-      className="bg-[#1a1a1a] text-white top-0 overflow-x-hidden h-screen no-scrollbar pointer-events-none"
+      className="bg-[#1a1a1a] text-white top-0 overflow-x-hidden h-screen no-scrollbar pointer-events-none relative"
       id="meet-the-team"
     >
       {/* background */}
@@ -252,25 +252,25 @@ const MeetTheTeam = () => {
 
       <div className="flex justify-center items-center flex-col h-full">
         {/* heading */}
-        <h1 className="playfair-display text-5xl sm:text-7xl my-12">
+        <h1 className="playfair-display text-5xl sm:text-7xl mt-12 mb-20">
           Meet The Team
         </h1>
 
         {/* gallery section */}
         <div
-          className=" flex pt-12 w-full gap-8 relative h-full min-[1440px]:flex-row flex-col"
+          className=" flex  w-full gap-8 relative h-full min-[1000px]:flex-row flex-col"
           id="gallery"
         >
           <div
-            className="absolute h-0 border-white border-2 w-[90%] left-1/2 -translate-x-1/2"
+            className="absolute h-0 border-white border-2 w-[90%] left-1/2 -translate-x-1/2 min-[1000px]:hidden min-[1300px]:block"
             style={{ top: 'calc( 50% + 2.5rem )' }}
           ></div>
           {/* names */}
           <div
             id="name"
-            className="min-[1440px]:basis-full items-center justify-center text-4xl flex-col flex my-12"
+            className="min-[1000px]:basis-full items-center justify-center text-4xl flex-col flex my-10 sm:my-0 "
           >
-            <div className="h-10 text-center relative w-full px-8 roboto-mono">
+            <div className="h-10 text-center relative min-[1000px]:w-[40%] min-[1300px]:w-full px-8 roboto-mono w-full">
               {meetTheTeam.map((item, idx) => {
                 return (
                   <div
@@ -307,9 +307,9 @@ const MeetTheTeam = () => {
           {/* post */}
           <div
             id="post"
-            className="min-[1440px]:basis-full min-[1440px]:static absolute bottom-12 left-1/2 w-screen -translate-x-1/2 translate-y-1/2 min-[1440px]:translate-x-0 min-[1440px]:translate-y-0 text-4xl playfair-display flex justify-center items-center"
+            className="min-[1000px]:basis-full min-[1000px]:static absolute bottom-12 left-1/2 w-screen -translate-x-1/2 translate-y-1/2 min-[1000px]:translate-x-0 min-[1000px]:translate-y-0 text-4xl playfair-display flex justify-center items-center"
           >
-            <div className="h-10 text-center relative w-full">
+            <div className="h-10 text-center relative min-[1000px]:w-[40%] min-[1300px]:w-full w-full">
               {meetTheTeam.map((item, idx) => {
                 return (
                   <div
