@@ -13,7 +13,7 @@ const MeetTheTeam = () => {
       photo:
         'https://res.cloudinary.com/dqcrkrtyr/image/upload/v1733908269/surya_v5ojeq.png',
       rotateFrom: '0',
-      rotateTo: '8.07',
+      rotateTo: '4.07',
     },
     {
       name: 'Prapti P Pradhan',
@@ -21,7 +21,7 @@ const MeetTheTeam = () => {
       photo:
         'https://res.cloudinary.com/dqcrkrtyr/image/upload/v1733908321/prapti_usrcux.png',
       rotateFrom: '0',
-      rotateTo: '-4.17',
+      rotateTo: '-2.17',
     },
     {
       name: 'Riya Pojage',
@@ -37,7 +37,7 @@ const MeetTheTeam = () => {
       photo:
         'https://res.cloudinary.com/dqcrkrtyr/image/upload/v1733908286/sristy_dxorna.png',
       rotateFrom: '0',
-      rotateTo: '6.73',
+      rotateTo: '3.36',
     },
   ]);
   gsap.registerPlugin(useGSAP);
@@ -68,26 +68,26 @@ const MeetTheTeam = () => {
     const photoTL = gsap.timeline(setupConfig);
     photoTL
       .from('#photo0', {
-        top: '100%',
+        top: '200%',
         rotate: 0,
         duration: 2,
         delay: 1,
         ease: 'power4.out',
       })
       .from('#photo1', {
-        top: '100%',
+        top: '200%',
         rotate: 0.56,
         duration: 2,
         ease: 'power4.out',
       })
       .from('#photo2', {
-        top: '100%',
+        top: '200%',
         rotate: -9.23,
         duration: 2,
         ease: 'power4.out',
       })
       .from('#photo3', {
-        top: '100%',
+        top: '200%',
         rotate: 3.93,
         duration: 2,
         ease: 'power4.out',
@@ -250,7 +250,7 @@ const MeetTheTeam = () => {
         className="absolute top-0 h-1/2"
       />
 
-      <div className="flex justify-center items-center flex-col h-full">
+      <div className="flex justify-center items-center flex-col h-full relative">
         {/* heading */}
         <h1 className="playfair-display text-5xl sm:text-7xl mt-12 mb-20">
           Meet The Team
@@ -258,7 +258,7 @@ const MeetTheTeam = () => {
 
         {/* gallery section */}
         <div
-          className=" flex  w-full gap-8 relative h-full min-[1000px]:flex-row flex-col"
+          className=" flex w-full gap-8 relative h-full min-[1000px]:flex-row flex-col py-4"
           id="gallery"
         >
           <div
@@ -268,7 +268,7 @@ const MeetTheTeam = () => {
           {/* names */}
           <div
             id="name"
-            className="min-[1000px]:basis-full items-center justify-center text-4xl flex-col flex my-10 sm:my-0 "
+            className="min-[1000px]:basis-full items-center justify-center text-4xl flex-col flex my-10 sm:my-0"
           >
             <div className="h-10 text-center relative min-[1000px]:w-[40%] min-[1300px]:w-full px-8 roboto-mono w-full">
               {meetTheTeam.map((item, idx) => {
@@ -288,7 +288,7 @@ const MeetTheTeam = () => {
           {/* photos */}
           <div
             id="photos"
-            className="basis-full relative flex justify-center items-center"
+            className="md:basis-full relative max-h-full w-full h-full"
           >
             {meetTheTeam.map((item, id) => {
               return (
@@ -296,7 +296,6 @@ const MeetTheTeam = () => {
                   color={item.photo}
                   rotate={item.rotateTo}
                   z={id}
-                  top={0}
                   key={id}
                   id={`photo${id}`}
                 />
@@ -307,7 +306,7 @@ const MeetTheTeam = () => {
           {/* post */}
           <div
             id="post"
-            className="min-[1000px]:basis-full min-[1000px]:static absolute bottom-12 left-1/2 w-screen -translate-x-1/2 translate-y-1/2 min-[1000px]:translate-x-0 min-[1000px]:translate-y-0 text-4xl playfair-display flex justify-center items-center"
+            className="min-[1000px]:basis-full min-[1000px]:static w-screen text-4xl playfair-display flex justify-center items-center"
           >
             <div className="h-10 text-center relative min-[1000px]:w-[40%] min-[1300px]:w-full w-full">
               {meetTheTeam.map((item, idx) => {

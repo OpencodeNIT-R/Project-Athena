@@ -23,8 +23,8 @@
     scrollbar-width: none;
   }
 
-  .mtt-xs-photo-frame {
-    @media (max-height: 700px) {
+  .ishlt800px {
+    @media (max-height: 800px) {
       height: 70vw;
       width: 60vw;
     }
