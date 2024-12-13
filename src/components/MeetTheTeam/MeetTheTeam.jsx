@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useState } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Heading from '../shared/Heading';
 
 const MeetTheTeam = () => {
   // eslint-disable-next-line no-unused-vars
@@ -252,9 +253,9 @@ const MeetTheTeam = () => {
 
       <div className="flex justify-center items-center flex-col h-full relative">
         {/* heading */}
-        <h1 className="playfair-display text-5xl sm:text-7xl mt-12 mb-20">
+        <Heading extraCSS={{ marginTop: '3rem', marginBottom: '4rem' }}>
           Meet The Team
-        </h1>
+        </Heading>
 
         {/* gallery section */}
         <div
