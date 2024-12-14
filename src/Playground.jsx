@@ -1,7 +1,9 @@
 import Lenis from 'lenis';
 import Gallery from './components/Gallery/Gallery';
-import Placeholder from './components/MeetTheTeam/Placeholder';
 import MeetTheTeam from './components/MeetTheTeam/MeetTheTeam';
+import Hero from './components/hero.jsx';
+import Navbar from './components/navbar.jsx';
+import Footer from './components/footer.jsx';
 
 // Initialize Lenis
 // eslint-disable-next-line no-unused-vars
@@ -12,10 +14,11 @@ const lenis = new Lenis({
 const Playground = () => {
   return (
     <div>
-      <Placeholder />
+      <Navbar />
+      <Hero />
       <Gallery />
       <MeetTheTeam />
-      <Placeholder />
+      <Footer />
     </div>
   );
 };
