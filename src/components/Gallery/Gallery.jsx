@@ -1,6 +1,3 @@
-import leftLight from './assets/leftLight.svg';
-import rightLight from './assets/rightLight.svg';
-import centerLight from './assets/centerLight.svg';
 import Photo from './Photo';
 import { useState } from 'react';
 import gsap from 'gsap';
@@ -12,49 +9,41 @@ const Gallery = () => {
   // eslint-disable-next-line no-unused-vars
   const [meetCoolPeople, setMeetCoolPeople] = useState(() => [
     {
-      color: '#ca99b3',
-      id: '0',
+      src: 'https://res.cloudinary.com/dqcrkrtyr/image/upload/v1734165998/image_8197_bqosvx.png',
       rotateFrom: gsap.utils.random(-10, 10),
       rotateTo: gsap.utils.random(-10, 10),
     },
     {
-      color: '#886a28',
-      id: '1',
+      src: 'https://res.cloudinary.com/dqcrkrtyr/image/upload/v1734165997/image_8195_df6msw.png',
       rotateFrom: gsap.utils.random(-10, 10),
       rotateTo: gsap.utils.random(-10, 10),
     },
     {
-      color: '#369121',
-      id: '2',
+      src: 'https://res.cloudinary.com/dqcrkrtyr/image/upload/v1734165998/image_8050_ptbz0x.png',
       rotateFrom: gsap.utils.random(-10, 10),
       rotateTo: gsap.utils.random(-10, 10),
     },
     {
-      color: '#c7a50c',
-      id: '3',
+      src: 'https://res.cloudinary.com/dqcrkrtyr/image/upload/v1734165998/image_8048_l6c63p.png',
       rotateFrom: gsap.utils.random(-10, 10),
       rotateTo: gsap.utils.random(-10, 10),
     },
     {
-      color: '#ea8311',
-      id: '4',
+      src: 'https://res.cloudinary.com/dqcrkrtyr/image/upload/v1734165998/image_8054_liggqt.png',
       rotateFrom: gsap.utils.random(-10, 10),
       rotateTo: gsap.utils.random(-10, 10),
     },
     {
-      color: '#439a49',
-      id: '5',
+      src: 'https://res.cloudinary.com/dqcrkrtyr/image/upload/v1734165997/image_8049_uje361.png',
       rotateFrom: gsap.utils.random(-10, 10),
       rotateTo: gsap.utils.random(-10, 10),
     },
     {
-      color: '#def00c',
-      id: '6',
+      src: 'https://res.cloudinary.com/dqcrkrtyr/image/upload/v1734165997/image_8046_lsrwjc.png',
       rotateFrom: gsap.utils.random(-10, 10),
       rotateTo: gsap.utils.random(-10, 10),
     },
   ]);
-  console.log(meetCoolPeople);
 
   gsap.registerPlugin(useGSAP);
   gsap.registerPlugin(ScrollTrigger);
@@ -93,11 +82,19 @@ const Gallery = () => {
       className="bg-[#060714] h-screen text-white flex justify-evenly items-center flex-col relative w-screen overflow-hidden"
       id="meet-cool-people"
     >
-      <img src={leftLight} className="absolute top-0 left-0" alt="" />
-      <img src={rightLight} className="absolute top-0 right-0" alt="" />
       <img
-        src={centerLight}
-        className="absolute top-0 left-1/2 -translate-x-1/2 h-full"
+        src="https://res.cloudinary.com/dqcrkrtyr/image/upload/v1734166017/leftLight_prua8v.svg"
+        className="absolute top-0 left-0 -z-10"
+        alt=""
+      />
+      <img
+        src="https://res.cloudinary.com/dqcrkrtyr/image/upload/v1734166017/rightLight_xqcort.svg"
+        className="absolute top-0 right-0 -z-10"
+        alt=""
+      />
+      <img
+        src="https://res.cloudinary.com/dqcrkrtyr/image/upload/v1734166017/centerLight_rkwtur.svg"
+        className="absolute top-0 left-1/2 -translate-x-1/2 h-full -z-10"
         alt=""
       />
       <Heading>
@@ -109,8 +106,7 @@ const Gallery = () => {
             return (
               <Photo
                 key={idx}
-                color={item.color}
-                id={item.id}
+                src={item.src}
                 rotateFrom={item.rotateFrom}
                 rotateTo={item.rotateTo}
               />
@@ -123,8 +119,7 @@ const Gallery = () => {
             .map((item, idx) => (
               <Photo
                 key={idx}
-                color={item.color}
-                id={item.id}
+                src={item.src}
                 rotateFrom={item.rotateFrom}
                 rotateTo={item.rotateTo}
               />
@@ -136,8 +131,7 @@ const Gallery = () => {
             .map((item, idx) => (
               <Photo
                 key={idx}
-                color={item.color}
-                id={item.id}
+                src={item.src}
                 rotateFrom={item.rotateFrom}
                 rotateTo={item.rotateTo}
               />

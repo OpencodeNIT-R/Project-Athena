@@ -253,7 +253,7 @@ const MeetTheTeam = () => {
 
       <div className="flex justify-center items-center flex-col h-full relative">
         {/* heading */}
-        <Heading extraCSS={{ marginTop: '3rem', marginBottom: '4rem' }}>
+        <Heading extraCSS={{ marginTop: '8rem', marginBottom: '4rem' }}>
           Meet The Team
         </Heading>
 
@@ -271,7 +271,7 @@ const MeetTheTeam = () => {
             id="name"
             className="min-[1000px]:basis-full items-center justify-center text-4xl flex-col flex my-10 sm:my-0"
           >
-            <div className="h-10 text-center relative min-[1000px]:w-[40%] min-[1300px]:w-full px-8 roboto-mono w-full">
+            <div className="h-10 text-center relative min-[1000px]:w-[40%] min-[1300px]:w-full px-8 font-robotoMono w-full">
               {meetTheTeam.map((item, idx) => {
                 return (
                   <div
@@ -307,7 +307,7 @@ const MeetTheTeam = () => {
           {/* post */}
           <div
             id="post"
-            className="min-[1000px]:basis-full min-[1000px]:static w-screen text-4xl playfair-display flex justify-center items-center"
+            className="min-[1000px]:basis-full min-[1000px]:static w-screen text-4xl font-playfair flex justify-center items-center"
           >
             <div className="h-10 text-center relative min-[1000px]:w-[40%] min-[1300px]:w-full w-full">
               {meetTheTeam.map((item, idx) => {

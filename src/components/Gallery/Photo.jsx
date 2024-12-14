@@ -1,10 +1,12 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
-const Photo = ({ color, id, rotateFrom, rotateTo }) => {
+const Photo = ({ rotateFrom, rotateTo, src }) => {
   const photoRef = useRef(null);
 
-  useEffect(() => {
+  gsap.registerPlugin(useGSAP);
+  useGSAP(() => {
     gsap.to(photoRef.current, {
       rotate: `${rotateTo}deg`,
       yoyo: true,
@@ -21,11 +23,8 @@ const Photo = ({ color, id, rotateFrom, rotateTo }) => {
       style={{ rotate: `${rotateFrom}deg` }}
     >
       <div className="h-full w-full bg-white flex flex-col items-center justify-center">
-        <div
-          style={{ backgroundColor: color }}
-          className="w-[90%] aspect-[3/2] text-7xl justify-center flex items-center"
-        >
-          {id}
+        <div className="w-[90%] aspect-[3/2] flex justify-center items-center overflow-hidden">
+          <img src={src} alt="hello" className="h-full w-full object-cover" />
         </div>
         <div id="spacer" className="h-[10%]"></div>
       </div>

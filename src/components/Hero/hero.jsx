@@ -22,7 +22,7 @@ export default function Home() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <button className="px-4 py-2 shadow-inner-white rounded-[10px] font-medium duration-200 w-[200px] sm:w-auto bg-transparent border border-purple-500/30 text-[#A546FF] hover:bg-[rgb(165,70,255)] hover:text-[#070614] hover:border-[#C3C3C3] transition-colors backdrop-blur-sm text-sm sm:text-base">
-            <div className="flex flex-row items-center justify-center space-x-2 sm:space-x-3">
+            <div className="flex flex-row items-center justify-center space-x-2 sm:space-x-3 font-robotoMono">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -33,7 +33,7 @@ export default function Home() {
               <span>GitHub</span>
             </div>
           </button>
-          <button className="px-4 py-2 shadow-inner-white rounded-[10px] font-medium duration-200 w-[200px] sm:w-auto bg-[rgb(165,70,255)] border border-[#C3C3C3] hover:bg-transparent hover:text-[#A546FF] hover:shadow-inner-white text-sm sm:text-base hover:border-purple-500/30 transition-colors">
+          <button className="px-4 py-2 shadow-inner-white rounded-[10px] font-medium duration-200 w-[200px] sm:w-auto bg-[rgb(165,70,255)] border border-[#C3C3C3] hover:bg-transparent hover:text-[#A546FF] hover:shadow-inner-white text-sm sm:text-base hover:border-purple-500/30 transition-colors font-robotoMono">
             Resources
           </button>
         </div>
