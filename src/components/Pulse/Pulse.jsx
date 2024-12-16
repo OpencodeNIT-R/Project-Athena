@@ -91,7 +91,7 @@ const Pulse = () => {
     animateElements(secondSet, '6rem');
   });
   return (
-    <div className="h-48 w-96 absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex">
+    <div className="h-48 w-96 absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex max-w-[90dvw] overflow-hidden">
       <div
         id="black-film"
         className="absolute top-0 right-1/2 h-full translate-x-1/2 bg-[linear-gradient(to_bottom,_black_0%,_transparent_25%,_transparent_70%,_#0C0C1D_100%)] z-10 w-[110%]"
