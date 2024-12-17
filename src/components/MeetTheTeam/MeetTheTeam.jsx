@@ -69,26 +69,26 @@ const MeetTheTeam = () => {
     const photoTL = gsap.timeline(setupConfig);
     photoTL
       .from('#photo0', {
-        top: '200%',
+        y: window.innerWidth <= 1024 ? '150%' : '100%',
         rotate: 0,
         duration: 2,
         delay: 1,
         ease: 'power4.out',
       })
       .from('#photo1', {
-        top: '200%',
+        y: window.innerWidth <= 1024 ? '150%' : '100%',
         rotate: 0.56,
         duration: 2,
         ease: 'power4.out',
       })
       .from('#photo2', {
-        top: '200%',
+        y: window.innerWidth <= 1024 ? '200%' : '100%',
         rotate: -9.23,
         duration: 2,
         ease: 'power4.out',
       })
       .from('#photo3', {
-        top: '200%',
+        y: window.innerWidth <= 1024 ? '150%' : '100%',
         rotate: 3.93,
         duration: 2,
         ease: 'power4.out',
@@ -119,28 +119,28 @@ const MeetTheTeam = () => {
   useGSAP(() => {
     const nameTL = gsap.timeline(baseConfig);
     nameTL
-      .to('#name-0', {
-        top: 0,
-        opacity: 1,
+      .from('#name-0', {
+        y: '100%',
+        opacity: 0,
         duration: 2,
         delay: 1,
         ease: 'power4.out',
       })
-      .to('#name-1', {
-        top: 0,
-        opacity: 1,
+      .from('#name-1', {
+        y: '100%',
+        opacity: 0,
         duration: 2,
         ease: 'power4.out',
       })
-      .to('#name-2', {
-        top: 0,
-        opacity: 1,
+      .from('#name-2', {
+        y: '100%',
+        opacity: 0,
         duration: 2,
         ease: 'power4.out',
       })
-      .to('#name-3', {
-        top: 0,
-        opacity: 1,
+      .from('#name-3', {
+        y: '100%',
+        opacity: 0,
         duration: 2,
         ease: 'power4.out',
       });
@@ -150,20 +150,20 @@ const MeetTheTeam = () => {
     const nameFadeTL = gsap.timeline(baseConfig);
     nameFadeTL
       .to('#name-0', {
-        top: '-100%',
+        y: '-100%',
         opacity: 0,
         duration: 2,
         delay: 3,
         ease: 'power4.out',
       })
       .to('#name-1', {
-        top: '-100%',
+        y: '-100%',
         opacity: 0,
         duration: 2,
         ease: 'power4.out',
       })
       .to('#name-2', {
-        top: '-100%',
+        y: '-100%',
         opacity: 0,
         duration: 2,
         ease: 'power4.out',
@@ -173,28 +173,28 @@ const MeetTheTeam = () => {
   useGSAP(() => {
     const postTL = gsap.timeline(baseConfig);
     postTL
-      .to('#post-0', {
-        top: 0,
-        opacity: 1,
+      .from('#post-0', {
+        y: '100%',
+        opacity: 0,
         duration: 2,
         delay: 1,
         ease: 'power4.out',
       })
-      .to('#post-1', {
-        top: 0,
-        opacity: 1,
+      .from('#post-1', {
+        y: '100%',
+        opacity: 0,
         duration: 2,
         ease: 'power4.out',
       })
-      .to('#post-2', {
-        top: 0,
-        opacity: 1,
+      .from('#post-2', {
+        y: '100%',
+        opacity: 0,
         duration: 2,
         ease: 'power4.out',
       })
-      .to('#post-3', {
-        top: 0,
-        opacity: 1,
+      .from('#post-3', {
+        y: '100%',
+        opacity: 0,
         duration: 2,
         ease: 'power4.out',
       });
@@ -204,20 +204,20 @@ const MeetTheTeam = () => {
     const postFadeTL = gsap.timeline(baseConfig);
     postFadeTL
       .to('#post-0', {
-        top: '-100%',
+        y: '-100%',
         opacity: 0,
         duration: 2,
         delay: 3,
         ease: 'power4.out',
       })
       .to('#post-1', {
-        top: '-100%',
+        y: '-100%',
         opacity: 0,
         duration: 2,
         ease: 'power4.out',
       })
       .to('#post-2', {
-        top: '-100%',
+        y: '-100%',
         opacity: 0,
         duration: 2,
         ease: 'power4.out',
@@ -226,7 +226,7 @@ const MeetTheTeam = () => {
 
   return (
     <div
-      className="bg-[#1a1a1a] text-white top-0 overflow-x-hidden h-screen no-scrollbar pointer-events-none relative"
+      className="bg-[#1a1a1a] text-white top-0 overflow-x-hidden h-screen no-scrollbar relative"
       id="meet-the-team"
     >
       {/* background */}
@@ -251,46 +251,47 @@ const MeetTheTeam = () => {
         className="absolute top-0 h-1/2"
       />
 
-      <div className="flex justify-center items-center flex-col h-full relative">
+      <div className="flex justify-center items-center h-full relative flex-wrap">
         {/* heading */}
-        <Heading extraCSS={{ marginTop: '8rem', marginBottom: '4rem' }}>
+        <Heading
+          extraCSS={{
+            marginTop: window.innerWidth <= 1024 ? '5rem' : '8rem',
+            width: '100dvw',
+            textAlign: 'center',
+          }}
+        >
           Meet The Team
         </Heading>
 
         {/* gallery section */}
         <div
-          className=" flex w-full gap-8 relative h-full min-[1000px]:flex-row flex-col py-4"
+          className="w-full flex flex-col h-full lg:flex-row mt-12 lg:mt-0"
           id="gallery"
         >
-          <div
-            className="absolute h-0 border-white border-2 w-[90%] left-1/2 -translate-x-1/2 min-[1000px]:hidden min-[1300px]:block"
-            style={{ top: 'calc( 50% + 2.5rem )' }}
-          ></div>
           {/* names */}
           <div
             id="name"
-            className="min-[1000px]:basis-full items-center justify-center text-4xl flex-col flex my-10 sm:my-0"
+            className="h-10 text-center relative font-robotoMono lg:w-1/3 lg:h-full"
           >
-            <div className="h-10 text-center relative min-[1000px]:w-[40%] min-[1300px]:w-full px-8 font-robotoMono w-full">
-              {meetTheTeam.map((item, idx) => {
-                return (
-                  <div
-                    className="absolute top-full left-1/2 w-full -translate-x-1/2 opacity-0"
-                    id={`name-${idx}`}
-                    key={idx}
-                  >
-                    {item.name.toUpperCase()}
-                  </div>
-                );
-              })}
-            </div>
+            {meetTheTeam.map((item, idx) => {
+              return (
+                <div
+                  className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-full md:text-3xl"
+                  id={`name-${idx}`}
+                  key={idx}
+                >
+                  {item.name.toUpperCase()}
+                </div>
+              );
+            })}
           </div>
 
           {/* photos */}
           <div
             id="photos"
-            className="md:basis-full relative max-h-full w-full h-full"
+            className="h-[calc(100%_-_17rem)] relative lg:w-1/3 lg:h-full"
           >
+            <div className="absolute h-0 border-white border-2 w-[90dvw] left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2"></div>
             {meetTheTeam.map((item, id) => {
               return (
                 <Photo
@@ -307,21 +308,19 @@ const MeetTheTeam = () => {
           {/* post */}
           <div
             id="post"
-            className="min-[1000px]:basis-full min-[1000px]:static w-screen text-4xl font-playfair flex justify-center items-center"
+            className="h-10 text-center relative font-playfair lg:w-1/3 w-full lg:h-full"
           >
-            <div className="h-10 text-center relative min-[1000px]:w-[40%] min-[1300px]:w-full w-full">
-              {meetTheTeam.map((item, idx) => {
-                return (
-                  <div
-                    className="absolute top-full right-1/2 w-full translate-x-1/2 opacity-0"
-                    id={`post-${idx}`}
-                    key={idx}
-                  >
-                    {item.post}
-                  </div>
-                );
-              })}
-            </div>
+            {meetTheTeam.map((item, idx) => {
+              return (
+                <div
+                  className="absolute top-1/2 -translate-y-full right-1/2 w-full translate-x-1/2 md:text-3xl text-center"
+                  id={`post-${idx}`}
+                  key={idx}
+                >
+                  {item.post}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

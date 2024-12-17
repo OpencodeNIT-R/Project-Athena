@@ -2,11 +2,11 @@ import Heading from '../shared/Heading';
 import AnimatedButton from './AnimatedButton';
 import TextWithModal from './TextWithModal';
 
-const topics = ['Open-Source', 'Cybersecurity', 'Web Dev', 'App Dev', 'AI/ML'];
+const topics = ['AI/ML', 'Web Dev', 'App Dev', 'Cybersecurity', 'Open-Source'];
 
 const AboutUs = () => {
   return (
-    <div className="h-screen bg-[#060714] sticky top-0 grid place-items-center text-white -z-10">
+    <div className="h-screen bg-[#060714] sticky top-0 grid place-items-center text-white -z-10 bg-[linear-gradient(180deg,_#0C0C1D_0%,_#070614FA_10%)]">
       <img
         src="https://res.cloudinary.com/dqcrkrtyr/image/upload/v1733829420/dots_rqtxh8.png"
         alt=""
@@ -32,13 +32,13 @@ const AboutUs = () => {
           className="absolute top-0 h-3/5 -z-10 left-0"
         />
 
-        <div className="flex flex-col items-center gap-8 justify-center basis-1">
+        <div className="flex flex-col items-center gap-8 justify-center basis-1 py-6">
           <Heading extraCSS={{ color: '#A546FF', fontFamily: 'Montserrat' }}>
             About us.
           </Heading>
           <TextWithModal />
         </div>
-        <div className="h-full w-full basis-1 flex justify-center items-center flex-wrap-reverse flex-col md:flex-row gap-4 md:gap-0">
+        <div className="h-full w-full basis-1 flex justify-center items-center flex-wrap-reverse flex-col md:flex-row gap-2 md:gap-0">
           {topics.map((item, idx) => {
             return (
               <div

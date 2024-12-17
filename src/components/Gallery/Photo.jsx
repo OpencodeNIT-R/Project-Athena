@@ -11,14 +11,14 @@ const Photo = ({ rotateFrom, rotateTo, src }) => {
       rotate: `${rotateTo}deg`,
       yoyo: true,
       repeat: -1,
-      ease: 'steps(3)',
+      ease: 'sine.inOut',
       duration: 2,
     });
   }, [rotateTo]);
 
   return (
     <div
-      className="md:w-[33dvw] w-[80dvw] aspect-[5/4] flex-shrink-0 p-4"
+      className="md:w-[33dvw] w-[80dvw] aspect-[5/4] flex-shrink-0 p-4 for-tablets"
       ref={photoRef}
       style={{ rotate: `${rotateFrom}deg` }}
     >

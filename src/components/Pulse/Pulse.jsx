@@ -23,7 +23,7 @@ const PulseElement = ({ position, id }) => {
         <div className="relative h-full w-full bg-[#BD00FF33]">
           <div
             id={`white-${id}-1`}
-            className={`bg-[radial-gradient(circle,_#BD00FF_25%,_#BD00FF11_75%)] absolute h-20 w-20 rounded-full ${translateClass}`}
+            className={`bg-[radial-gradient(circle,_#BD00FF_25%,_#BD00FF11_75%)] absolute h-20 w-20 rounded-full ${translateClass} -translate-y-full`}
           ></div>
         </div>
       </div>
@@ -33,7 +33,7 @@ const PulseElement = ({ position, id }) => {
         <div className="relative h-full w-full bg-[#BD00FF33]">
           <div
             id={`white-${id}-2`}
-            className={`bg-[radial-gradient(circle,_#BD00FF_25%,_#BD00FF11_75%)] absolute h-20 w-20 rounded-full ${translateClass} -translate-y-24`}
+            className={`bg-[radial-gradient(circle,_#BD00FF_25%,_#BD00FF11_75%)] absolute h-20 w-20 rounded-full ${translateClass} -translate-y-44`}
           ></div>
         </div>
       </div>
@@ -78,7 +78,6 @@ const Pulse = () => {
           {
             y: yValue,
             duration: durations[index],
-            yoyo: true,
             repeat: -1,
             ease: easings[index],
           },
@@ -89,20 +88,18 @@ const Pulse = () => {
 
     animateElements(firstSet, '12rem');
     animateElements(secondSet, '6rem');
+    //bg-[linear-gradient(180deg,_#0C0C1D_0%,_#070614FA_100%)]
   });
   return (
-    <div className="h-48 w-96 absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex max-w-[90dvw] overflow-hidden">
-      <div
-        id="black-film"
-        className="absolute top-0 right-1/2 h-full translate-x-1/2 bg-[linear-gradient(to_bottom,_black_0%,_transparent_25%,_transparent_70%,_#0C0C1D_100%)] z-10 w-[110%]"
-      ></div>
-      <PulseElement position="left" id="1" />
-      <PulseElement position="left" id="2" />
-      <PulseElement position="center" id="3" />
-      <PulseElement position="right" id="4" />
-      <PulseElement position="right" id="5" />
+    <div className="h-48 w-96 absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2  max-w-[90dvw] z-10">
+      <div className="z-20 relative flex w-full h-full">
+        <PulseElement position="left" id="1" />
+        <PulseElement position="left" id="2" />
+        <PulseElement position="center" id="3" />
+        <PulseElement position="right" id="4" />
+        <PulseElement position="right" id="5" />
+      </div>
     </div>
   );
 };
-
 export default Pulse;

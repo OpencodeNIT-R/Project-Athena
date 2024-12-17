@@ -4,7 +4,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[url('/src/assets/hero.png')] bg-cover bg-center flex items-center justify-center px-4 sm:px-6 md:px-8 relative">
       <Pulse />
-      <div className="absolute inset-0 bg-[#070614] bg-opacity-10"></div>
       <div className="relative z-10 text-center max-w-4xl mt-20 mx-auto">
         <div className="inline-block shadow-inner-white font-robotoMono tracking-wide px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-[#3A0070] bg-gradient-to-b from-[#DADADA] to-[#744E99] bg-clip-text text-transparent text-xs sm:text-sm mb-2 sm:mb-4">
           Opensource your imagination

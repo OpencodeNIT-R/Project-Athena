@@ -56,10 +56,9 @@
     scrollbar-width: none;
   }
 
-  .ishlt800px {
-    @media (max-height: 800px) {
-      height: 70vw;
-      width: 60vw;
+  @media(500px<=width<=800px) and (1000px<=height<=1050px){
+    .for-tablets{
+      width: 62dvw;
     }
   }
 }

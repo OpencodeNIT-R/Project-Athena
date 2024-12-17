@@ -47,6 +47,7 @@ const Gallery = () => {
 
   gsap.registerPlugin(useGSAP);
   gsap.registerPlugin(ScrollTrigger);
+  console.log('width = ', window.innerWidth, '\nheight = ', window.innerHeight);
 
   const stConfig = {
     scrollTrigger: {
