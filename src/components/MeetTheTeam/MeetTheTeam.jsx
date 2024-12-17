@@ -226,7 +226,7 @@ const MeetTheTeam = () => {
 
   return (
     <div
-      className="bg-[#1a1a1a] text-white top-0 overflow-x-hidden h-screen no-scrollbar relative"
+      className="bg-[#1a1a1a] text-white top-0 overflow-x-hidden h-screen no-scrollbar relative pointer-events-none"
       id="meet-the-team"
     >
       {/* background */}
