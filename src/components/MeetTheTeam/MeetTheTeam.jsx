@@ -1,15 +1,18 @@
 import Photo from './Photo';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Heading from '../shared/Heading';
 
 const MeetTheTeam = () => {
-  // eslint-disable-next-line no-unused-vars
   const [orientation, setOrientation] = useState(
     window.screen.orientation.type.split('-')[0]
   );
+
+  useEffect(() => {
+    setOrientation(window.screen.orientation.type.split('-')[0]);
+  }, [setOrientation]);
 
   // eslint-disable-next-line no-unused-vars
   const [meetTheTeam, setMeetTheTeam] = useState(() => [
@@ -19,7 +22,7 @@ const MeetTheTeam = () => {
       photo:
         'https://res.cloudinary.com/dqcrkrtyr/image/upload/v1733908269/surya_v5ojeq.png',
       rotateFrom: '0',
-      rotateTo: '4.07',
+      rotateTo: 'rotate-[-4.07deg]',
     },
     {
       name: 'Prapti P Pradhan',
@@ -27,7 +30,7 @@ const MeetTheTeam = () => {
       photo:
         'https://res.cloudinary.com/dqcrkrtyr/image/upload/v1733908321/prapti_usrcux.png',
       rotateFrom: '0',
-      rotateTo: '-2.17',
+      rotateTo: 'rotate-[2.17deg]',
     },
     {
       name: 'Riya Pojage',
@@ -35,7 +38,7 @@ const MeetTheTeam = () => {
       photo:
         'https://res.cloudinary.com/dqcrkrtyr/image/upload/v1733908304/riya_pojage_kui6lj.png',
       rotateFrom: '0',
-      rotateTo: '0',
+      rotateTo: 'rotate-0',
     },
     {
       name: 'Srishty Mangutte',
@@ -43,7 +46,7 @@ const MeetTheTeam = () => {
       photo:
         'https://res.cloudinary.com/dqcrkrtyr/image/upload/v1733908286/sristy_dxorna.png',
       rotateFrom: '0',
-      rotateTo: '3.36',
+      rotateTo: 'rotate-[-3.36deg]',
     },
   ]);
   gsap.registerPlugin(useGSAP);
@@ -74,26 +77,26 @@ const MeetTheTeam = () => {
     const photoTL = gsap.timeline(setupConfig);
     photoTL
       .from('#photo0', {
-        y: orientation == 'portrait' ? '60dvh' : '100%',
+        y: orientation == 'portrait' ? '80dvh' : '100%',
         rotate: 0,
         duration: 2,
         delay: 1,
         ease: 'power4.out',
       })
       .from('#photo1', {
-        y: orientation == 'portrait' ? '60dvh' : '100%',
+        y: orientation == 'portrait' ? '80dvh' : '100%',
         rotate: 0.56,
         duration: 2,
         ease: 'power4.out',
       })
       .from('#photo2', {
-        y: orientation == 'portrait' ? '60dvh' : '100%',
+        y: orientation == 'portrait' ? '80dvh' : '100%',
         rotate: -9.23,
         duration: 2,
         ease: 'power4.out',
       })
       .from('#photo3', {
-        y: orientation == 'portrait' ? '60dvh' : '100%',
+        y: orientation == 'portrait' ? '80dvh' : '100%',
         rotate: 3.93,
         duration: 2,
         ease: 'power4.out',
@@ -260,7 +263,7 @@ const MeetTheTeam = () => {
         {/* heading */}
         <Heading
           extraCSS={{
-            marginTop: window.screen.orientation <= 1024 ? '5rem' : '8rem',
+            marginTop: window.screen.innerWidth <= 1024 ? '5rem' : '8rem',
             width: '100dvw',
             textAlign: 'center',
           }}
@@ -270,12 +273,17 @@ const MeetTheTeam = () => {
 
         {/* gallery section */}
         <div
-          className="w-full flex h-full mt-12 pb-12 lg:mt-0"
+          className="w-full flex h-full"
           id="gallery"
           style={
             orientation == 'landscape'
-              ? { flexDirection: 'row', marginTop: 'none' }
-              : { flexDirection: 'column', height: '100%', marginTop: '3rem' }
+              ? { flexDirection: 'row', paddingBottom: '5rem' }
+              : {
+                  flexDirection: 'column',
+                  height: 'max-content',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }
           }
         >
           {/* names */}
@@ -284,14 +292,22 @@ const MeetTheTeam = () => {
             className="text-center relative font-robotoMono"
             style={
               orientation == 'landscape'
-                ? { width: '33%', height: '100%' }
-                : { width: '100%', height: '2.5rem' }
+                ? {
+                    width: '33%',
+                    height: '100%',
+                  }
+                : {
+                    width: '100%',
+                    height: '2.5rem',
+                    marginBottom: '-2rem',
+                    marginTop: '2rem',
+                  }
             }
           >
             {meetTheTeam.map((item, idx) => {
               return (
                 <div
-                  className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-full md:text-3xl"
+                  className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-full text-3xl"
                   id={`name-${idx}`}
                   key={idx}
                 >
@@ -308,14 +324,14 @@ const MeetTheTeam = () => {
             style={
               orientation == 'landscape'
                 ? { width: '33%', height: '100%' }
-                : { width: '100%', height: 'calc(100% - 17rem)' }
+                : { width: '100%', height: '100dvw' }
             }
           >
             <div className="absolute h-0 border-white border-2 w-[90dvw] left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2"></div>
             {meetTheTeam.map((item, id) => {
               return (
                 <Photo
-                  color={item.photo}
+                  src={item.photo}
                   rotate={item.rotateTo}
                   z={id}
                   key={id}
@@ -331,14 +347,20 @@ const MeetTheTeam = () => {
             className="text-center relative font-playfair lg:h-full"
             style={
               orientation == 'landscape'
-                ? { width: '33%', height: '100%' }
-                : { width: '100%', height: '2.5rem' }
+                ? {
+                    width: '33%',
+                    height: '100%',
+                  }
+                : {
+                    width: '100%',
+                    height: '2.5rem',
+                  }
             }
           >
             {meetTheTeam.map((item, idx) => {
               return (
                 <div
-                  className="absolute top-1/2 -translate-y-full right-1/2 w-full translate-x-1/2 md:text-3xl text-center"
+                  className="absolute top-1/2 -translate-y-full right-1/2 w-full translate-x-1/2 text-center text-3xl"
                   id={`post-${idx}`}
                   key={idx}
                 >

@@ -11,7 +11,7 @@ const Photo = ({ rotateFrom, rotateTo, src }) => {
       rotate: `${rotateTo}deg`,
       yoyo: true,
       repeat: -1,
-      ease: 'sine.inOut',
+      ease: 'steps(3)',
       duration: 2,
     });
   }, [rotateTo]);
