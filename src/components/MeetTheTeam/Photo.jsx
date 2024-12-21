@@ -1,7 +1,7 @@
 const Photo = ({ color, rotate, z, id }) => {
   return (
     <div
-      className="max-w-full lg:h-auto lg:w-4/5 aspect-[4/5] flex flex-col justify-center items-center absolute bg-white top-1/2 left-1/2"
+      className="max-w-full  aspect-[4/5] flex flex-col justify-center items-center absolute bg-white top-1/2 left-1/2"
       id={id}
       style={{
         transform:

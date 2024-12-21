@@ -56,8 +56,8 @@
     scrollbar-width: none;
   }
 
-  @media(500px<=width<=800px) and (1000px<=height<=1050px){
-    .for-tablets{
+  @media (500px<=width<=800px) and (1000px<=height<=1050px) {
+    .for-tablets {
       width: 62dvw;
     }
   }

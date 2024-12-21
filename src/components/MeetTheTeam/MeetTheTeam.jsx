@@ -7,6 +7,11 @@ import Heading from '../shared/Heading';
 
 const MeetTheTeam = () => {
   // eslint-disable-next-line no-unused-vars
+  const [orientation, setOrientation] = useState(
+    window.screen.orientation.type.split('-')[0]
+  );
+
+  // eslint-disable-next-line no-unused-vars
   const [meetTheTeam, setMeetTheTeam] = useState(() => [
     {
       name: 'Suryakant Jena',
@@ -69,26 +74,26 @@ const MeetTheTeam = () => {
     const photoTL = gsap.timeline(setupConfig);
     photoTL
       .from('#photo0', {
-        y: window.innerWidth <= 1024 ? '150%' : '100%',
+        y: orientation == 'portrait' ? '60dvh' : '100%',
         rotate: 0,
         duration: 2,
         delay: 1,
         ease: 'power4.out',
       })
       .from('#photo1', {
-        y: window.innerWidth <= 1024 ? '150%' : '100%',
+        y: orientation == 'portrait' ? '60dvh' : '100%',
         rotate: 0.56,
         duration: 2,
         ease: 'power4.out',
       })
       .from('#photo2', {
-        y: window.innerWidth <= 1024 ? '200%' : '100%',
+        y: orientation == 'portrait' ? '60dvh' : '100%',
         rotate: -9.23,
         duration: 2,
         ease: 'power4.out',
       })
       .from('#photo3', {
-        y: window.innerWidth <= 1024 ? '150%' : '100%',
+        y: orientation == 'portrait' ? '60dvh' : '100%',
         rotate: 3.93,
         duration: 2,
         ease: 'power4.out',
@@ -255,7 +260,7 @@ const MeetTheTeam = () => {
         {/* heading */}
         <Heading
           extraCSS={{
-            marginTop: window.innerWidth <= 1024 ? '5rem' : '8rem',
+            marginTop: window.screen.orientation <= 1024 ? '5rem' : '8rem',
             width: '100dvw',
             textAlign: 'center',
           }}
@@ -265,13 +270,23 @@ const MeetTheTeam = () => {
 
         {/* gallery section */}
         <div
-          className="w-full flex flex-col h-full lg:flex-row mt-12 lg:mt-0"
+          className="w-full flex h-full mt-12 pb-12 lg:mt-0"
           id="gallery"
+          style={
+            orientation == 'landscape'
+              ? { flexDirection: 'row', marginTop: 'none' }
+              : { flexDirection: 'column', height: '100%', marginTop: '3rem' }
+          }
         >
           {/* names */}
           <div
             id="name"
-            className="h-10 text-center relative font-robotoMono lg:w-1/3 lg:h-full"
+            className="text-center relative font-robotoMono"
+            style={
+              orientation == 'landscape'
+                ? { width: '33%', height: '100%' }
+                : { width: '100%', height: '2.5rem' }
+            }
           >
             {meetTheTeam.map((item, idx) => {
               return (
@@ -289,7 +304,12 @@ const MeetTheTeam = () => {
           {/* photos */}
           <div
             id="photos"
-            className="h-[calc(100%_-_17rem)] relative lg:w-1/3 lg:h-full"
+            className="relative"
+            style={
+              orientation == 'landscape'
+                ? { width: '33%', height: '100%' }
+                : { width: '100%', height: 'calc(100% - 17rem)' }
+            }
           >
             <div className="absolute h-0 border-white border-2 w-[90dvw] left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2"></div>
             {meetTheTeam.map((item, id) => {
@@ -308,7 +328,12 @@ const MeetTheTeam = () => {
           {/* post */}
           <div
             id="post"
-            className="h-10 text-center relative font-playfair lg:w-1/3 w-full lg:h-full"
+            className="text-center relative font-playfair lg:h-full"
+            style={
+              orientation == 'landscape'
+                ? { width: '33%', height: '100%' }
+                : { width: '100%', height: '2.5rem' }
+            }
           >
             {meetTheTeam.map((item, idx) => {
               return (
