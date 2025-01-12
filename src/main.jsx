@@ -4,6 +4,7 @@ import './index.css';
 import App from './App.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import Playground from './Playground.jsx';
+import ComingSoon from './components/ComingSoon/ComingSoon.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -11,6 +12,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/playground" element={<Playground />} />
+        <Route path="/coming-soon" element={<ComingSoon />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

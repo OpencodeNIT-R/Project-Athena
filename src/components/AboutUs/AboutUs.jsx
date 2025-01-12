@@ -38,11 +38,11 @@ const AboutUs = () => {
           </Heading>
           <TextWithModal />
         </div>
-        <div className="h-full w-full basis-1 flex justify-center items-center flex-wrap-reverse flex-col md:flex-row gap-2 md:gap-0">
+        <div className="h-full w-full flex flex-wrap gap-2 items-center justify-center pb-12 md:gap-0">
           {topics.map((item, idx) => {
             return (
               <div
-                className="md:w-1/3 w-full flex justify-center items-center"
+                className="w-fit md:w-1/3 flex justify-center items-center"
                 key={idx}
               >
                 <AnimatedButton text={item} />

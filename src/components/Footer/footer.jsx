@@ -13,7 +13,7 @@ export default function Footer() {
             </h2>
             <div className="absolute -bottom-8 right-0">
               <a
-                href="#"
+                href="https://chat.whatsapp.com/GMNyUn47aEh0DE7krtd1Kx"
                 className="inline-flex font-robotoMono text-[#989898] items-center text-lg hover:text-[#bfbfbf] transition-colors relative group"
               >
                 Join us ↗
@@ -24,31 +24,39 @@ export default function Footer() {
         </div>
         <div className="flex flex-col space-y-1">
           <div className="flex flex-col md:flex-row justify-between items-start font-montserrat md:items-center mb-5">
-            <a href="/" className="text-5xl font-bold text-shaaa mb-6 md:mb-0">
+            <a
+              href="/"
+              className="text-5xl font-bold text-shaaa mb-6 md:mb-0 flex items-center gap-2"
+            >
               OPENCODE
             </a>
             <nav className="flex flex-wrap gap-4 font-robotoMono text-[#989898] md:gap-8 mb-0">
-              <a href="#" className="hover:text-[#A546FF] transition-colors">
+              <a
+                href="/coming-soon"
+                className="hover:text-[#A546FF] transition-colors"
+              >
                 About
               </a>
-              <a href="#" className="hover:text-[#A546FF] transition-colors">
+              <a
+                href="/coming-soon"
+                className="hover:text-[#A546FF] transition-colors"
+              >
                 Events
               </a>
-              <a href="#" className="hover:text-[#A546FF] transition-colors">
+              <a
+                href="/coming-soon"
+                className="hover:text-[#A546FF] transition-colors"
+              >
                 Projects
               </a>
-              <a href="#" className="hover:text-[#A546FF] transition-colors">
+              <a
+                href="/coming-soon"
+                className="hover:text-[#A546FF] transition-colors"
+              >
                 Team
               </a>
             </nav>
           </div>
-          <p className="text-sm font-robotoMono text-[#989898] max-w-2xl mb-10 pb-5">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremquez laudantium, totam rem aperiam, eaque ipsa
-            quae andSed ut perspiciatis unde omnis iste natus error sit
-            voluptatem accusantium doloremque laudantium, totam rem aperiam,
-            eaque ipsa quae and
-          </p>
         </div>
         <div className="border-t border-white/20 pt-8 ">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
@@ -56,16 +64,28 @@ export default function Footer() {
               Architected with ❤️ by OpenCode Team
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-[#A546FF] hover:text-[#B388FF]">
+              <a
+                href="https://www.instagram.com/opencode.nitr"
+                className="text-[#A546FF] hover:text-[#B388FF]"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-[#A546FF] hover:text-[#B388FF]">
+              <a
+                href="https://www.linkedin.com/company/opencode-nit-rourkela/"
+                className="text-[#A546FF] hover:text-[#B388FF]"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-[#A546FF] hover:text-[#B388FF]">
+              <a
+                href="https://github.com/OpencodeNIT-R"
+                className="text-[#A546FF] hover:text-[#B388FF]"
+              >
                 <Github className="h-5 w-5" />
               </a>
-              <a href="#" className="text-[#A546FF] hover:text-[#B388FF]">
+              <a
+                href="https://x.com/Opencode_NITRKL"
+                className="text-[#A546FF] hover:text-[#B388FF]"
+              >
                 <Twitter className="h-5 w-5" />
               </a>
             </div>

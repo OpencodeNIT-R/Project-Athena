@@ -12,7 +12,7 @@ const lenis = new Lenis({
   autoRaf: true,
 });
 
-const Playground = () => {
+const App = () => {
   return (
     <div>
       <Navbar />
@@ -25,4 +25,4 @@ const Playground = () => {
   );
 };
 
-export default Playground;
+export default App;

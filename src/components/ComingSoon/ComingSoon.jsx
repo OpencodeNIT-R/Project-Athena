@@ -1,27 +1,13 @@
-import Pulse from '../Pulse/Pulse';
+import Navbar from '../Navbar/navbar';
 
-export default function Home() {
+export default function ComingSoon() {
   return (
     <main className="min-h-screen bg-[url('/src/assets/hero.png')] bg-cover bg-center flex items-center justify-center px-4 sm:px-6 md:px-8 relative">
-      <Pulse />
+      <Navbar />
       <div className="relative z-10 text-center max-w-4xl mt-20 mx-auto">
-        <div className="inline-block shadow-inner-white font-robotoMono tracking-wide px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-[#3A0070] bg-gradient-to-b from-[#DADADA] to-[#744E99] bg-clip-text text-transparent text-xs sm:text-sm mb-2 sm:mb-4">
-          Opensource your imagination
-        </div>
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-montserrat font-bold bg-gradient-to-b from-white to-[#222121] bg-clip-text text-transparent mb-6 sm:mb-8">
-          OPENCODE
+          COMING SOON
         </h1>
-        <p className="text-white/60 font-robotoMono text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-8 sm:mb-10">
-          The{' '}
-          <span className="bg-gradient-to-b from-[#DADADA] to-[#744E99] bg-clip-text text-transparent">
-            Opensource
-          </span>{' '}
-          and{' '}
-          <span className="bg-gradient-to-b from-[#DADADA] to-[#744E99] bg-clip-text text-transparent">
-            Cybersecurity
-          </span>{' '}
-          community of NIT Rourkela
-        </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <a href="https://github.com/OpencodeNIT-R">
             <button className="px-4 py-2 shadow-inner-white rounded-[10px] font-medium duration-200 w-[200px] sm:w-auto bg-transparent border border-purple-500/30 text-[#A546FF] hover:bg-[rgb(165,70,255)] hover:text-[#070614] hover:border-[#C3C3C3] transition-colors backdrop-blur-sm text-sm sm:text-base">
