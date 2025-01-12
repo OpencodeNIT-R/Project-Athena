@@ -4,11 +4,7 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        'inner-white': 'inset 0 2px 4px rgba(255, 255, 255, 0.5)', 
-      },      
-      fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
-        robotoMono: ['Roboto Mono', 'monospace'],
+        'inner-white': 'inset 0 2px 4px rgba(255, 255, 255, 0.5)',
       },
     },
   },
