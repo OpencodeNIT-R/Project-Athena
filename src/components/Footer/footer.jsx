@@ -13,7 +13,7 @@ export default function Footer() {
             </h2>
             <div className="absolute -bottom-8 right-0">
               <a
-                href="https://chat.whatsapp.com/GMNyUn47aEh0DE7krtd1Kx"
+                href="https://chat.whatsapp.com/F16DrLFyG4aJbpXhOKzrFk"
                 className="inline-flex font-robotoMono text-[#989898] items-center text-lg hover:text-[#bfbfbf] transition-colors relative group"
               >
                 Join us ↗

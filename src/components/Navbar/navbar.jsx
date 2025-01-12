@@ -96,7 +96,7 @@ export default function Navbar() {
                   {item.label}
                 </a>
               ))}
-              <a href="https://chat.whatsapp.com/GMNyUn47aEh0DE7krtd1Kx">
+              <a href="https://chat.whatsapp.com/F16DrLFyG4aJbpXhOKzrFk">
                 <button className="mt-4 w-full bg-transparent border shadow-inner-white border-purple-500/30 text-purple-400 hover:bg-purple-500/10 transition-colors backdrop-blur-sm text-sm px-4 py-2 rounded-[10px]">
                   Join us
                 </button>
