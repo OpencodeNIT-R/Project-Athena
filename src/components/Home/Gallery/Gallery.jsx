@@ -3,7 +3,7 @@ import { useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Heading from '../shared/Heading';
+import Heading from '../../shared/Heading';
 
 const Gallery = () => {
   // eslint-disable-next-line no-unused-vars

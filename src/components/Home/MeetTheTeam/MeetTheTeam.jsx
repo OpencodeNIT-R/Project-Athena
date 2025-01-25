@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useEffect, useState } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Heading from '../shared/Heading';
+import Heading from '../../shared/Heading';
 
 const MeetTheTeam = () => {
   const [orientation, setOrientation] = useState(
