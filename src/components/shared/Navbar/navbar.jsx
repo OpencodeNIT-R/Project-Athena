@@ -6,7 +6,7 @@ export default function Navbar() {
 
   const navigationItems = [
     { href: '/coming-soon', label: 'About' },
-    { href: '/coming-soon', label: 'Events' },
+    { href: '/events', label: 'Events' },
     { href: '/coming-soon', label: 'Projects' },
     { href: '/coming-soon', label: 'Team' },
   ];

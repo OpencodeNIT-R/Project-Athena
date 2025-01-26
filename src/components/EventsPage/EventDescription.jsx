@@ -1,7 +1,7 @@
 const EventDescription = ({ text, id }) => {
   return (
     <div
-      className="font-robotoMono text-lg lg:text-2xl text-[#F8F8F8B8] h-full w-full absolute max-w-screen"
+      className="font-robotoMono lg:text-xl text-[#F8F8F8B8] h-full w-full absolute max-w-screen font-light"
       id={`event-${id}`}
     >
       {text}

@@ -96,7 +96,7 @@ const Event = ({ event }) => {
           className="absolute h-screen w-screen"
         />
         <div className="flex flex-col lg:w-1/2 justify-center pl-[5vw] lg:gap-8">
-          <div className="font-silverEditorial text-5xl lg:text-7xl leading-[131.74px]">
+          <div className="font-silverEditorial text-5xl lg:text-7xl leading-[131.74px] tracking-widest">
             {event.eventName}
           </div>
           <div className="h-72 lg:h-48 relative w-[80vw] lg:w-[38rem] max-w-screen">
