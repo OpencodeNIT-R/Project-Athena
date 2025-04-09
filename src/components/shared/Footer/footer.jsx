@@ -2,8 +2,8 @@ import { Instagram, Linkedin, Github, Twitter } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#070614] text-white py-12 md:px-12 px-4">
-      <div className="hidden lg:flex flex-col md:flex-row justify-between items-baseline mb-8">
+    <footer className="bg-[#030208] text-white py-12 md:px-12 px-4 h-[80vh] flex justify-end flex-col">
+      <div className="hidden lg:flex flex-col md:flex-row justify-between items-baseline mb-8 h-fit">
         <div className="relative">
           <h2 className="text-xl xl:text-3xl font-silverEditorial font-medium  inline-block text-[#EEDCFF] italic tracking-widest">
             Let&apos;s discuss and make something <br /> cool together
@@ -27,14 +27,14 @@ export default function Footer() {
         </a>
       </div>
 
-      <div className="lg:hidden">
+      <div className="lg:hidden h-full flex flex-col justify-between">
         <p className="text-[#989898] font-robotoMono">
           Architected with ❤️ <br />{' '}
           <span className="text-white font-bold text-xl">by OpenCode Team</span>
         </p>
         <a
           href="/"
-          className="w-full text-center font-monteserrat font-extrabold text-6xl md:text-9xl block my-6"
+          className="w-full text-center font-montserrat font-extrabold text-6xl md:text-9xl block my-6"
         >
           OPENCODE
         </a>
