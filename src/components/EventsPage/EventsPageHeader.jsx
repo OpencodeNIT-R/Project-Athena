@@ -78,12 +78,11 @@ const EventsHeader = () => {
         className="w-11/12 font-robotoMono text-[#F8F8F8B8] text-lg lg:text-2xl text-center leading-10 tracking-wide"
         id="events-page-desc"
       >
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-        odit aut fugit, sed quia consequuntur magni dolores eos consectetur
-        adipiscing elit
+        Our events, like HackNITR and HackInnovision, are great chances for
+        students to team up and create innovative solutions. Whether you’re
+        tackling the thrilling 36-hour coding marathons or enjoying friendly
+        challenges, our events fun workshops and competitions inspire the next
+        generation of tech lovers.
       </div>
 
       <div
