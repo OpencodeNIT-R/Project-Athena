@@ -2,7 +2,7 @@ const Photo = ({ src, rotate, z, id }) => {
   return (
     <div
       className={
-        'portrait:max-h-full landscape:w-[90%] aspect-[4/5] flex flex-col justify-center items-center absolute bg-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ' +
+        'portrait:max-h-full landscape:w-[80%] aspect-[4/5] flex flex-col justify-center items-center absolute bg-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ' +
         rotate
       }
       id={id}

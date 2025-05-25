@@ -1,4 +1,4 @@
-import Heading from '../shared/Heading';
+import Heading from '../../shared/Heading';
 import AnimatedButton from './AnimatedButton';
 import TextWithModal from './TextWithModal';
 
