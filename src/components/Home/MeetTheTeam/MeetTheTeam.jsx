@@ -5,6 +5,13 @@ import { useEffect, useState } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Heading from '../../shared/Heading';
 
+import abhijeetBiswalImg from '../../../assets/team/abhijeet_biswal.jpg';
+import pManikantaImg from '../../../assets/team/p_manikanta.jpg';
+import aishwaryJhunjhunwalaImg from '../../../assets/team/aishwary_jhunjhunwala.jpg';
+import krishAgarwalImg from '../../../assets/team/krish_agarwal.jpg';
+import vaniMittalImg from '../../../assets/team/vani_mittal.jpg';
+import princeChoudharyImg from '../../../assets/team/prince_choudhary.jpg';
+
 const MeetTheTeam = () => {
   const [orientation, setOrientation] = useState(
     window.screen.orientation.type.split('-')[0]
@@ -17,44 +24,46 @@ const MeetTheTeam = () => {
   // eslint-disable-next-line no-unused-vars
   const [meetTheTeam, setMeetTheTeam] = useState(() => [
     {
-      name: 'Dhrutinandan Swain',
+      name: 'Abhijeet Biswal',
       post: 'President',
-      photo:
-        'https://res.cloudinary.com/doojbkvn6/image/upload/v1747995996/Picture_Window_rxolzh.png',
+      photo: abhijeetBiswalImg,
       rotateFrom: '0',
       rotateTo: 'rotate-[-4.07deg]',
     },
     {
-      name: 'Harsh Verma',
+      name: 'P Manikanta',
       post: 'Vice President',
-      photo:
-        'https://res.cloudinary.com/doojbkvn6/image/upload/v1747996090/Picture_Window_1_woz6ls.png',
+      photo: pManikantaImg,
       rotateFrom: '0',
       rotateTo: 'rotate-[2.17deg]',
     },
     {
-      name: 'Siddharth Mishra',
-      post: 'Technical Lead',
-      photo:
-        'https://res.cloudinary.com/doojbkvn6/image/upload/v1747996090/Picture_Window_2_smhw1k.png',
+      name: 'Aishwary Jhunjhunwala',
+      post: 'Secretary',
+      photo: aishwaryJhunjhunwalaImg,
       rotateFrom: '0',
-      rotateTo: 'rotate-[-1.5deg]',
+      rotateTo: 'rotate-[-2.5deg]',
     },
     {
-      name: 'Shriya Dalai',
-      post: 'Community Manager',
-      photo:
-        'https://res.cloudinary.com/doojbkvn6/image/upload/v1747996091/Picture_Window_3_-Picsart-AiImageEnhancer_obe20w.png',
+      name: 'Krish Agarwal',
+      post: 'Tech Lead',
+      photo: krishAgarwalImg,
       rotateFrom: '0',
-      rotateTo: 'rotate-[5.36deg]',
+      rotateTo: 'rotate-[3.8deg]',
     },
     {
-      name: 'Stitha Pragyan Jali',
+      name: 'Vani Mittal',
       post: 'Design Lead',
-      photo:
-        'https://res.cloudinary.com/doojbkvn6/image/upload/v1747996090/Picture_Window_4_jzttwk.png',
+      photo: vaniMittalImg,
       rotateFrom: '0',
       rotateTo: 'rotate-[-3.36deg]',
+    },
+    {
+      name: 'Prince Choudhary',
+      post: 'Community Manager',
+      photo: princeChoudharyImg,
+      rotateFrom: '0',
+      rotateTo: 'rotate-[4.5deg]',
     },
   ]);
   gsap.registerPlugin(useGSAP);
@@ -64,7 +73,7 @@ const MeetTheTeam = () => {
     trigger: '#meet-the-team',
     scroller: 'body',
     start: 'top top',
-    end: 'top -400%',
+    end: 'top -500%',
     scrub: 2,
   };
 
@@ -111,7 +120,13 @@ const MeetTheTeam = () => {
       })
       .from('#photo4', {
         y: orientation == 'portrait' ? '80dvh' : '100%',
-        rotate: -9.54,
+        rotate: -5.4,
+        duration: 2,
+        ease: 'power4.out',
+      })
+      .from('#photo5', {
+        y: orientation == 'portrait' ? '80dvh' : '100%',
+        rotate: 4.8,
         duration: 2,
         ease: 'power4.out',
       });
@@ -137,6 +152,11 @@ const MeetTheTeam = () => {
         ease: 'power4.out',
       })
       .to('#photo3-film', {
+        opacity: 0.6,
+        duration: 2,
+        ease: 'power4.out',
+      })
+      .to('#photo4-film', {
         opacity: 0.6,
         duration: 2,
         ease: 'power4.out',
@@ -176,6 +196,12 @@ const MeetTheTeam = () => {
         opacity: 0,
         duration: 2,
         ease: 'power4.out',
+      })
+      .from('#name-5', {
+        y: '100%',
+        opacity: 0,
+        duration: 2,
+        ease: 'power4.out',
       });
   });
 
@@ -202,6 +228,12 @@ const MeetTheTeam = () => {
         ease: 'power4.out',
       })
       .to('#name-3', {
+        y: '-100%',
+        opacity: 0,
+        duration: 2,
+        ease: 'power4.out',
+      })
+      .to('#name-4', {
         y: '-100%',
         opacity: 0,
         duration: 2,
@@ -242,6 +274,12 @@ const MeetTheTeam = () => {
         opacity: 0,
         duration: 2,
         ease: 'power4.out',
+      })
+      .from('#post-5', {
+        y: '100%',
+        opacity: 0,
+        duration: 2,
+        ease: 'power4.out',
       });
   });
 
@@ -268,6 +306,12 @@ const MeetTheTeam = () => {
         ease: 'power4.out',
       })
       .to('#post-3', {
+        y: '-100%',
+        opacity: 0,
+        duration: 2,
+        ease: 'power4.out',
+      })
+      .to('#post-4', {
         y: '-100%',
         opacity: 0,
         duration: 2,

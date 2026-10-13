@@ -14,8 +14,8 @@ const Photo = ({ src, rotate, z, id }) => {
         className="absolute h-full w-full top-0 left-0 shadow-black bg-black shadow-xl opacity-0"
         id={`${id}-film`}
       ></div>
-      <div className="aspect-square w-[90%] justify-center items-center flex">
-        <img src={src} className="h-full w-full" alt="" />
+      <div className="aspect-square w-[90%] justify-center items-center flex overflow-hidden">
+        <img src={src} className="h-full w-full object-cover" alt="" />
       </div>
       <div id="spacer" className="h-1/6"></div>
     </div>

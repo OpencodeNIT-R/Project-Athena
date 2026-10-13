@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, Github, Twitter } from 'lucide-react';
+import { Instagram, Linkedin, Github, Twitter, Phone } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -28,10 +28,21 @@ export default function Footer() {
       </div>
 
       <div className="lg:hidden h-full flex flex-col justify-between">
-        <p className="text-[#989898] font-robotoMono">
-          Architected with ❤️ <br />{' '}
-          <span className="text-white font-bold text-xl">by OpenCode Team</span>
-        </p>
+        <div>
+          <p className="text-[#989898] font-robotoMono">
+            Architected with ❤️ <br />{' '}
+            <span className="text-white font-bold text-xl">
+              by OpenCode Team
+            </span>
+          </p>
+          <a
+            href="tel:+917205680081"
+            className="flex items-center gap-2 text-sm text-[#989898] font-robotoMono hover:text-[#A546FF] transition-colors mt-2"
+          >
+            <Phone className="h-4 w-4 text-[#A546FF]" />
+            <span>Abhijeet Biswal: +91 7205680081</span>
+          </a>
+        </div>
         <a
           href="/"
           className="w-full text-center font-montserrat font-extrabold text-6xl md:text-9xl block my-6"
@@ -114,12 +125,21 @@ export default function Footer() {
       </div>
 
       <div className="hidden lg:flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-        <p className="text-lg text-[#989898] font-robotoMono">
-          Architected with ❤️ <br />{' '}
-          <span className="text-white font-bold text-2xl">
-            by OpenCode Team
-          </span>
-        </p>
+        <div className="flex flex-col gap-1">
+          <p className="text-lg text-[#989898] font-robotoMono">
+            Architected with ❤️ <br />{' '}
+            <span className="text-white font-bold text-2xl">
+              by OpenCode Team
+            </span>
+          </p>
+          <a
+            href="tel:+917205680081"
+            className="flex items-center gap-2 text-sm text-[#989898] font-robotoMono hover:text-[#A546FF] transition-colors mt-1"
+          >
+            <Phone className="h-4 w-4 text-[#A546FF]" />
+            <span>Abhijeet Biswal: +91 7205680081</span>
+          </a>
+        </div>
         <div className="flex flex-col gap-4">
           <nav className="flex font-robotoMono text-[#989898] mb-0">
             <a
